@@ -55,4 +55,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    void test(){
+        int i = 1;
+        int j = 2;
+        return;
+    }
 }
