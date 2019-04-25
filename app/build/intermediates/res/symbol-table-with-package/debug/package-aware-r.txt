@@ -684,6 +684,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
 id CTRL
+id ConstraintLayout
 id FUNCTION
 id META
 id SHIFT
@@ -708,6 +709,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addplayer
+id againbtn
 id alertTitle
 id all
 id always
@@ -716,6 +719,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id button2
 id buttonPanel
 id center
 id center_horizontal
@@ -728,6 +732,8 @@ id clip_vertical
 id collapseActionView
 id content
 id contentPanel
+id correct
+id correcttxt
 id custom
 id customPanel
 id decor_content_parent
@@ -736,7 +742,6 @@ id desc
 id dimensions
 id direct
 id disableHome
-id editText
 id edit_query
 id end
 id expand_activities_button
@@ -765,10 +770,12 @@ id line1
 id line3
 id listMode
 id list_item
+id listnames
 id logojest
 id message
 id middle
 id multiply
+id name1
 id never
 id none
 id normal
@@ -778,7 +785,10 @@ id notification_main_column_container
 id packed
 id parent
 id parentPanel
+id passes
+id passtxt
 id percent
+id playername
 id playgame
 id playnow
 id progress_circular
@@ -816,6 +826,8 @@ id src_in
 id src_over
 id standard
 id start
+id startbtn
+id stopbtn
 id submenuarrow
 id submit_area
 id tabMode
@@ -878,6 +890,10 @@ layout activity_main
 layout activity_main2
 layout activity_main3
 layout activity_main4
+layout activity_main5
+layout activity_main6
+layout activity_main7
+layout activity_main8
 layout item
 layout notification_action
 layout notification_action_tombstone
@@ -892,6 +908,8 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 raw themesong
+string Correct
+string Pass
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -931,9 +949,17 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string add
 string app_name
+string enter_name
+string new_game
+string next_player
+string passes
+string play_game
 string search_menu_title
+string start_game
 string status_bar_notification_info_overflow
+string you_re_up
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

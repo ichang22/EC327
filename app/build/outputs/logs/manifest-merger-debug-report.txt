@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-45:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\DrewB\.gradle\caches\transforms-2\files-2.1\3549dbb7b853bf884ed26f77dce1e41b\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\DrewB\.gradle\caches\transforms-2\files-2.1\ef99cd47b8879c1e4408db682819fcc0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\DrewB\.gradle\caches\transforms-2\files-2.1\b792a12eb2e1881f3ba98fc0f1663bb0\AndroidManifest.xml:17:1-22:12
@@ -32,25 +32,25 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\DrewB\.gradle\cache
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\DrewB\.gradle\caches\transforms-2\files-2.1\3ca41193ac47ce6acb54053f13919961\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\DrewB\.gradle\caches\transforms-2\files-2.1\f971dbaac7a27ae2476f8e1de59228de\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:interpolator:28.0.0] C:\Users\DrewB\.gradle\caches\transforms-2\files-2.1\80a2740b3073ccf912f6555683dc0ea2\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-45:12
+INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-45:12
 	package
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:3:5-45
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:1-45:12
 		INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:5:5-35:19
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:5:5-43:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\DrewB\.gradle\caches\transforms-2\files-2.1\ef99cd47b8879c1e4408db682819fcc0\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\DrewB\.gradle\caches\transforms-2\files-2.1\ef99cd47b8879c1e4408db682819fcc0\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\DrewB\.gradle\caches\transforms-2\files-2.1\53e383c6f15d18747a47b7938d575cc9\AndroidManifest.xml:22:5-94
@@ -71,48 +71,68 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\DrewB\.gra
 		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:11:9-52
-activity#com.example.animatedbackground.Main4Activity
-ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:12:9-15:25
-	android:screenOrientation
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:13:13-50
-	android:configChanges
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:14:13-63
+activity#com.example.Jesture.Main7Activity
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:12:9-60
 	android:name
 		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:12:19-48
-activity#com.example.animatedbackground.Main3Activity
-ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:16:9-19:15
+activity#com.example.Jesture.Main6Activity
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:13:9-16:52
 	android:screenOrientation
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:17:13-49
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:16:13-49
 	android:configChanges
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:18:13-63
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:15:13-63
 	android:name
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:16:19-48
-activity#com.example.animatedbackground.Main2Activity
-ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:20:9-23:15
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:14:13-42
+activity#com.example.Jesture.Main5Activity
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:17:9-20:52
 	android:screenOrientation
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:21:13-49
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:20:13-49
 	android:configChanges
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:22:13-63
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:19:13-63
 	android:name
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:20:19-48
-activity#com.example.animatedbackground.MainActivity
-ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:24:9-34:20
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:18:13-42
+activity#com.example.Jesture.Main4Activity
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:21:9-24:53
 	android:screenOrientation
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:25:13-49
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:24:13-50
 	android:configChanges
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:26:13-63
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:23:13-63
 	android:name
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:24:19-47
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:22:13-42
+activity#com.example.Jesture.Main3Activity
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:25:9-28:52
+	android:screenOrientation
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:28:13-49
+	android:configChanges
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:27:13-63
+	android:name
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:26:13-42
+activity#com.example.Jesture.Main2Activity
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:29:9-32:52
+	android:screenOrientation
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:32:13-49
+	android:configChanges
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:31:13-63
+	android:name
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:30:13-42
+activity#com.example.Jesture.MainActivity
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:33:9-42:20
+	android:screenOrientation
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:36:13-49
+	android:configChanges
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:35:13-63
+	android:name
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:34:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:30:13-33:29
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:37:13-41:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:38:17-69
 	android:name
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:38:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:32:17-77
+ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:40:17-77
 	android:name
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:32:27-74
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:40:27-74
 uses-sdk
 INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml

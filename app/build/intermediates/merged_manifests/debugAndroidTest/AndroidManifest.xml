@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.animatedbackground.test" >
+    package="com.example.Jesture.test" >
 
     <uses-sdk
         android:minSdkVersion="23"
@@ -10,8 +10,8 @@
         android:name="android.support.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.example.animatedbackground"
-        android:targetPackage="com.example.animatedbackground" />
+        android:label="Tests for com.example.Jesture"
+        android:targetPackage="com.example.Jesture" />
 
     <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
