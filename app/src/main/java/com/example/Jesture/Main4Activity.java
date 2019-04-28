@@ -1,24 +1,42 @@
 package com.example.Jesture;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Locale;
+import java.util.Random;
+import java.util.ArrayList;
+
 
 public class Main4Activity extends AppCompatActivity implements SensorEventListener {
 
+private static final long Game_Time = 30000; //(milliseconds)
+private TextView mTextViewCountDown;
+private Button mButtonEscape;
+private CountDownTimer mCountDownTimer;
+private boolean mTimerRunning;
+private long mTimeLeft = Game_Time;
 
     TextView xaccel;
     TextView feed;
     TextView question;
     String [] array1 = {"Donald Trump","Britney Spears","Bradley Cooper","Michelle Obama", "Prof Stringhini"};
+
     //next item
-    int i=0;
+    Random rand = new Random();
+    int i= rand.nextInt(array1.length);
+
     //number correct
     public static int c = 0;
     //number pass
@@ -34,6 +52,20 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
 
+        mTextViewCountDown = findViewById(R.id.text_view_countdown);
+        mButtonEscape = findViewById(R.id.button_exit);
+
+        mButtonEscape.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    //escape to new activity
+                Intent intent = new Intent(Main4Activity.this, Main7Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        StartTimer();
+
         xaccel = (TextView) findViewById(R.id.xaccel);
         feed = (TextView) findViewById(R.id.feed);
         question = (TextView) findViewById(R.id.question);
@@ -44,11 +76,38 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
 
     }
 
+    private void StartTimer() {
+        mCountDownTimer = new CountDownTimer(mTimeLeft, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                mTimeLeft = millisUntilFinished;
+                updateCountDownText();
+            }
+            @Override
+            public void onFinish() {
+                mTimerRunning = false;
+                //escape to new activity
+                Intent intent = new Intent(Main4Activity.this, Main7Activity.class);
+                startActivity(intent);
+            }
+        }.start();
+        mTimerRunning = true;
+    }
+    private void updateCountDownText() {
+        int minutes = (int) (mTimeLeft / 1000) / 60;
+        int seconds = (int) (mTimeLeft / 1000) % 60;
+        String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
+        mTextViewCountDown.setText(timeLeftFormatted);
+    }
+
     @Override
     public void onSensorChanged(SensorEvent event) {
         if(event.sensor.getType() != Sensor.TYPE_ACCELEROMETER){
             return;
         }
+        ArrayList<Integer> previous = new ArrayList<>();
+        previous.add(i);
+
         float x = event.values[0];
         float y = event.values[1];
         float z = event.values[2];
@@ -69,8 +128,10 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
             if(i < array1.length-1){
                 next = true;
                 c++;
-                i++;
-
+                while (previous.contains(i)) {
+                    i = rand.nextInt(array1.length);
+                }
+                previous.add(i);
             }
         }
 
@@ -79,8 +140,10 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
             if(i < array1.length-1){
                 next = true;
                 p++;
-                i++;
-
+                while (previous.contains(i)) {
+                    i = rand.nextInt(array1.length);
+                }
+                previous.add(i);
             }
         }
         else if(z > -6 && z < 6){
