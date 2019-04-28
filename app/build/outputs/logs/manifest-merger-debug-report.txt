@@ -62,7 +62,7 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\DrewB\.gra
 	android:supportsRtl
 		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:8:9-43
 	android:roundIcon
 		ADDED from C:\Users\DrewB\Desktop\EC327 Final Project\Jesture\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
