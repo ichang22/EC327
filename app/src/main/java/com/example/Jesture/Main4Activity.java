@@ -12,17 +12,22 @@ import android.widget.TextView;
 
 public class Main4Activity extends AppCompatActivity implements SensorEventListener {
 
+
     TextView xaccel;
     TextView feed;
     TextView question;
     String [] array1 = {"Donald Trump","Britney Spears","Bradley Cooper","Michelle Obama", "Prof Stringhini"};
+    //next item
     int i=0;
+    //number correct
+    public static int c = 0;
+    //number pass
+    public static int p = 0;
     boolean next = true;
 
     //Sensor manager
     private SensorManager sensorManager;
     private Sensor accelerometerSensor;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,15 +68,17 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
             feed.setText("Correct");
             if(i < array1.length-1){
                 next = true;
+                c++;
                 i++;
 
             }
         }
 
         else if(z < -6 && !next){
-            feed.setText("Wrong");
+            feed.setText("Pass");
             if(i < array1.length-1){
                 next = true;
+                p++;
                 i++;
 
             }
@@ -88,3 +95,4 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
 
     }
 }
+//WHEN ADD NEXT ACTIVITY, NEED TO SEND P AND C TO SHOW SCORE, use keys: "correct" and "pass"
