@@ -31,8 +31,6 @@ public class Main7Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main7);
 
-
-
         //receive correct and pass score
         //int c = 5;
         //int p = 5;

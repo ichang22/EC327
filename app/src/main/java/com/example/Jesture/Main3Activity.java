@@ -23,6 +23,7 @@ public class Main3Activity extends AppCompatActivity {
     //create dynamic array to add names to
    public static final ArrayList<String> nameArray = new ArrayList<String>();
 
+
     @Override
     protected void onRestart() {
         super.onRestart();

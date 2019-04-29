@@ -31,6 +31,7 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
     TextView xaccel;
     TextView feed;
     TextView question;
+
     String [] array1 = {"Donald Trump","Britney Spears","Bradley Cooper","Michelle Obama", "Prof Stringhini"};
 
     //next item

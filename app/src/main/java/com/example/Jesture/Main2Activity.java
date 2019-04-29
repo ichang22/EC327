@@ -69,11 +69,11 @@ public class Main2Activity extends AppCompatActivity {
                 playnow.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if(pos ==0 || pos == 1){
-                            startActivity(new Intent(Main2Activity.this, MainActivity.class));
-                        }
+                        if(pos ==0 || pos == 1) {
+                                startActivity(new Intent(Main2Activity.this, MainActivity.class));
+                            }
                         else if(pos == 3){
-                            startActivity(new Intent(Main2Activity.this, Main3Activity.class));
+                                startActivity(new Intent(Main2Activity.this, Main3Activity.class));
                         }
                     }
                 });
