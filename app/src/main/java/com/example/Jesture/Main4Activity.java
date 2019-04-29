@@ -21,12 +21,12 @@ import java.util.ArrayList;
 
 public class Main4Activity extends AppCompatActivity implements SensorEventListener {
 
-private static final long Game_Time = 30000; //(milliseconds)
-private TextView mTextViewCountDown;
-private Button mButtonEscape;
-private CountDownTimer mCountDownTimer;
-private boolean mTimerRunning;
-private long mTimeLeft = Game_Time;
+    private static final long Game_Time = 30000; //(milliseconds)
+    private TextView mTextViewCountDown;
+    private Button mButtonEscape;
+    private CountDownTimer mCountDownTimer;
+    private boolean mTimerRunning;
+    private long mTimeLeft = Game_Time;
 
     TextView xaccel;
     TextView feed;
@@ -36,6 +36,7 @@ private long mTimeLeft = Game_Time;
     //next item
     Random rand = new Random();
     int i= rand.nextInt(array1.length);
+    ArrayList<Integer> previous = new ArrayList<>();
 
     //number correct
     public static int c = 0;
@@ -58,8 +59,13 @@ private long mTimeLeft = Game_Time;
         mButtonEscape.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    //escape to new activity
+                //escape to new activity
+                ArrayList<String> nameArray = getIntent().getExtras().getStringArrayList("list");
                 Intent intent = new Intent(Main4Activity.this, Main7Activity.class);
+                //send num correct and num pass
+                intent.putExtra("correct", c);
+                intent.putExtra("pass", p);
+                intent.putStringArrayListExtra("list", nameArray);
                 startActivity(intent);
             }
         });
@@ -77,6 +83,9 @@ private long mTimeLeft = Game_Time;
     }
 
     private void StartTimer() {
+           //reset p and c each time the timer starts
+            p = 0;
+            c = 0;
         mCountDownTimer = new CountDownTimer(mTimeLeft, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -87,7 +96,12 @@ private long mTimeLeft = Game_Time;
             public void onFinish() {
                 mTimerRunning = false;
                 //escape to new activity
+                ArrayList<String> nameArray = getIntent().getExtras().getStringArrayList("list");
                 Intent intent = new Intent(Main4Activity.this, Main7Activity.class);
+                //send num correct and num pass
+                intent.putExtra("correct", c);
+                intent.putExtra("pass", p);
+                intent.putStringArrayListExtra("list", nameArray);
                 startActivity(intent);
             }
         }.start();
@@ -105,8 +119,6 @@ private long mTimeLeft = Game_Time;
         if(event.sensor.getType() != Sensor.TYPE_ACCELEROMETER){
             return;
         }
-        ArrayList<Integer> previous = new ArrayList<>();
-        previous.add(i);
 
         float x = event.values[0];
         float y = event.values[1];
@@ -119,31 +131,35 @@ private long mTimeLeft = Game_Time;
 
             @Override
             public void run() {
-        question.setText(array1[i]);
+                question.setText(array1[i]);
             }
         }, 2000 );//time in milisecond
 
         if(z > 6 && !next){
             feed.setText("Correct");
-            if(i < array1.length-1){
+            if(i <= array1.length-1){
                 next = true;
                 c++;
-                while (previous.contains(i)) {
+                while (previous.contains(i) && previous.size()<array1.length) {
                     i = rand.nextInt(array1.length);
+                    System.out.println("Random Index = " + i);
                 }
                 previous.add(i);
+                System.out.println("Previous Index List: " + previous);
             }
         }
 
         else if(z < -6 && !next){
             feed.setText("Pass");
-            if(i < array1.length-1){
+            if(i <= array1.length-1){
                 next = true;
                 p++;
-                while (previous.contains(i)) {
+                while (previous.contains(i) && previous.size()<array1.length) {
                     i = rand.nextInt(array1.length);
+                    System.out.println("Random Index = " + i);
                 }
                 previous.add(i);
+                System.out.println("Previous Index List: " + previous);
             }
         }
         else if(z > -6 && z < 6){
