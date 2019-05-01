@@ -14,11 +14,8 @@ public class Main6Activity extends AppCompatActivity {
 
     TextView nextplayer;
     Button startbtn;
-    //TEMP
-    Button button2;
     static int count;
     ArrayList<String> nameArray = null;
-    //public static String gameflag;
 
 
     @Override
@@ -26,7 +23,6 @@ public class Main6Activity extends AppCompatActivity {
         super.onResume();
         //receive names and number of players
         Bundle b = getIntent().getExtras();
-        //gameflag = getIntent().getStringExtra("gameflag");
 
 
 
@@ -34,7 +30,6 @@ public class Main6Activity extends AppCompatActivity {
             nameArray = getIntent().getExtras().getStringArrayList("list");
         }
 
-        int numPlayers = getIntent().getIntExtra("key", 0);
         String flag = getIntent().getStringExtra("flag");
 
 
@@ -62,32 +57,18 @@ public class Main6Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main6);
 
 
-
         //start game
         startbtn = (Button) findViewById(R.id.startbtn);
         startbtn.setOnClickListener(new View.OnClickListener() {
             String gameflag = getIntent().getStringExtra("gameflag");
             @Override
             public void onClick(View v) {
-                if(gameflag.equals("celeb")) {
-                    Intent intent = new Intent(Main6Activity.this, Main4Activity.class);
-                    intent.putStringArrayListExtra("list", nameArray);
-                    intent.putExtra("gameflag", gameflag);
-                    startActivity(intent);
-                }
-                //elseif flag = blah blah choose diff game activity
-            }
-        });
+               Intent intent = new Intent(Main6Activity.this, Main4Activity.class);
+               intent.putStringArrayListExtra("list", nameArray);
+               intent.putExtra("gameflag", gameflag);
+               startActivity(intent);
 
-        //temp button to test new game screen
-        button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Main6Activity.this, Main7Activity.class);
-                intent.putStringArrayListExtra("list", nameArray);
-                startActivity(intent);
-            }
+                }
         });
 
 

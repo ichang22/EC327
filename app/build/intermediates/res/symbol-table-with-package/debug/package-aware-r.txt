@@ -725,7 +725,6 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button2
 id buttonPanel
 id button_exit
 id cancel_action
@@ -769,6 +768,7 @@ id homeAsUp
 id icon
 id icon_group
 id ifRoom
+id ifnull
 id image
 id info
 id invisible
@@ -902,10 +902,8 @@ layout activity_main
 layout activity_main2
 layout activity_main3
 layout activity_main4
-layout activity_main5
 layout activity_main6
 layout activity_main7
-layout activity_main8
 layout item
 layout notification_action
 layout notification_action_tombstone
@@ -973,6 +971,7 @@ string abc_toolbar_collapse_description
 string add
 string app_name
 string enter_name
+string input_player_names_to_advance_to_next_screen
 string new_game
 string next_player
 string passes
