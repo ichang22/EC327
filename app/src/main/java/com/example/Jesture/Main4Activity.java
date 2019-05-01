@@ -27,17 +27,33 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
     private CountDownTimer mCountDownTimer;
     private boolean mTimerRunning;
     private long mTimeLeft = Game_Time;
+    //public static String gameflag;
+
 
     TextView xaccel;
     TextView feed;
     TextView question;
 
-    String [] array1 = {"Donald Trump","Britney Spears","Bradley Cooper","Michelle Obama", "Prof Stringhini"};
+    /*String gameflag = getIntent().getStringExtra("gameflag");
+    if(gameflag.equals(“actions”){
+        String [] array1 = {"Donald Trump", "Marilyn Monroe", "Ellen Degeneres", "Beyonce", "Morgan Freeman", "Jimmy Fallon", "Michael Jackson", "Justin Bieber", "Mac Miller", "Kim Kardashian", "Miley Cyrus", "Emma Watson", "Jennifer Anniston", "Elvis Presley", "Barrack Obama", "Steve Jobs", "Elon Musk", "George Clooney", "Mark Zuckerberg", "Princess Diana", "Kanye West", "Britney Spears","Bradley Cooper","Michelle Obama", "Prof Stringhini"};
+    }
+    else  if(gameflag.equals(“accents)){
+        String [] array1 = {"Donald Trump", "Marilyn Monroe", "Ellen Degeneres", "Beyonce", "Morgan Freeman", "Jimmy Fallon", "Michael Jackson", "Justin Bieber", "Mac Miller", "Kim Kardashian", "Miley Cyrus", "Emma Watson", "Jennifer Anniston", "Elvis Presley", "Barrack Obama", "Steve Jobs", "Elon Musk", "George Clooney", "Mark Zuckerberg", "Princess Diana", "Kanye West", "Britney Spears","Bradley Cooper","Michelle Obama", "Prof Stringhini"};
+    }
+    else  if(gameflag.equals(“celeb”)){
+        String [] array1 = {"Donald Trump", "Marilyn Monroe", "Ellen Degeneres", "Beyonce", "Morgan Freeman", "Jimmy Fallon", "Michael Jackson", "Justin Bieber", "Mac Miller", "Kim Kardashian", "Miley Cyrus", "Emma Watson", "Jennifer Anniston", "Elvis Presley", "Barrack Obama", "Steve Jobs", "Elon Musk", "George Clooney", "Mark Zuckerberg", "Princess Diana", "Kanye West", "Britney Spears","Bradley Cooper","Michelle Obama", "Prof Stringhini"};
+    }*/
+
+    //Temporary array1
+    String [] array1 = {"Donald Trump", "Marilyn Monroe", "Ellen Degeneres", "Beyonce", "Morgan Freeman", "Jimmy Fallon", "Michael Jackson", "Justin Bieber", "Mac Miller", "Kim Kardashian", "Miley Cyrus", "Emma Watson", "Jennifer Anniston", "Elvis Presley", "Barrack Obama", "Steve Jobs", "Elon Musk", "George Clooney", "Mark Zuckerberg", "Princess Diana", "Kanye West", "Britney Spears","Bradley Cooper","Michelle Obama", "Prof Stringhini"};
 
     //next item
     Random rand = new Random();
     int i= rand.nextInt(array1.length);
+    //array of already used indexes
     ArrayList<Integer> previous = new ArrayList<>();
+
 
     //number correct
     public static int c = 0;
@@ -61,11 +77,13 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
             @Override
             public void onClick(View v) {
                 //escape to new activity
+                String gameflag = getIntent().getStringExtra("gameflag");
                 ArrayList<String> nameArray = getIntent().getExtras().getStringArrayList("list");
                 Intent intent = new Intent(Main4Activity.this, Main7Activity.class);
                 //send num correct and num pass
                 intent.putExtra("correct", c);
                 intent.putExtra("pass", p);
+                intent.putExtra("gameflag", gameflag);
                 intent.putStringArrayListExtra("list", nameArray);
                 startActivity(intent);
             }
@@ -96,12 +114,14 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
             @Override
             public void onFinish() {
                 mTimerRunning = false;
-                //escape to new activity
+                String gameflag = getIntent().getStringExtra("gameflag");
                 ArrayList<String> nameArray = getIntent().getExtras().getStringArrayList("list");
+                //escape to new activity
                 Intent intent = new Intent(Main4Activity.this, Main7Activity.class);
-                //send num correct and num pass
+                //send num correct/pass and which game you are on
                 intent.putExtra("correct", c);
                 intent.putExtra("pass", p);
+                intent.putExtra("gameflag", gameflag);
                 intent.putStringArrayListExtra("list", nameArray);
                 startActivity(intent);
             }
@@ -120,6 +140,10 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
         if(event.sensor.getType() != Sensor.TYPE_ACCELEROMETER){
             return;
         }
+        //first term presented
+        if(previous.size() == 0) {
+            previous.add(i);
+        }
 
         float x = event.values[0];
         float y = event.values[1];
@@ -134,36 +158,37 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
             public void run() {
                 question.setText(array1[i]);
             }
-        }, 2000 );//time in milisecond
+        }, 2000 );//time in millisecond
 
         if(z > 6 && !next){
             feed.setText("Correct");
-            if(i <= array1.length-1){
+            if(i <= array1.length){
                 next = true;
                 c++;
-                while (previous.contains(i) && previous.size()<array1.length) {
+                while (previous.contains(i) && previous.size()< array1.length) {
                     i = rand.nextInt(array1.length);
-                    System.out.println("Random Index = " + i);
                 }
                 previous.add(i);
-                System.out.println("Previous Index List: " + previous);
             }
         }
-
+        //!next in
         else if(z < -6 && !next){
             feed.setText("Pass");
-            if(i <= array1.length-1){
+            //if random index is less than available indexes (always should be), enter
+            //next = true means won't enter this elseif again until orientation resets
+            if(i <= array1.length){
                 next = true;
                 p++;
-                while (previous.contains(i) && previous.size()<array1.length) {
+                //won't contain i the first time, index has already been called, then create new random index
+                while (previous.contains(i) && previous.size()< array1.length ) {
                     i = rand.nextInt(array1.length);
-                    System.out.println("Random Index = " + i);
                 }
+                //add index to array so doesn't repeat
                 previous.add(i);
-                System.out.println("Previous Index List: " + previous);
             }
         }
         else if(z > -6 && z < 6){
+            //orientation reset
             next = false;
             feed.setText("???");
 
@@ -175,4 +200,4 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
 
     }
 }
-//WHEN ADD NEXT ACTIVITY, NEED TO SEND P AND C TO SHOW SCORE, use keys: "correct" and "pass"
+

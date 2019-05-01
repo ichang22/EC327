@@ -8,13 +8,13 @@
     tools:context=".Main2Activity">
 
     <android.support.v4.view.ViewPager
-        android:foregroundGravity="center"
         android:id="@+id/viewPager"
-        android:layout_centerInParent="true"
-        android:overScrollMode="never"
-        android:clipToPadding="false"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:clipToPadding="false"
+        android:foregroundGravity="center"
+        android:overScrollMode="never">
 
     </android.support.v4.view.ViewPager>
 

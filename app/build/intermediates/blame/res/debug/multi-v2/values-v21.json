@@ -4,6 +4,25 @@
             "outputFile": "C:\\Users\\DrewB\\Desktop\\EC327 Final Project\\Jesture\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\DrewB\\.gradle\\caches\\transforms-2\\files-2.1\\5c0fee5e63180dab51883c6c8e118f69\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,5,8,11",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,223,386,554",
+                        "endLines": "4,7,10,13",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "218,381,549,716"
+                    },
+                    "to": {
+                        "startLines": "272,275,279,283",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "19870,20038,20327,20623",
+                        "endLines": "274,277,281,285",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "20033,20196,20490,20785"
+                    }
+                },
+                {
                     "source": "C:\\Users\\DrewB\\.gradle\\caches\\transforms-2\\files-2.1\\53e383c6f15d18747a47b7938d575cc9\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
@@ -14,12 +33,12 @@
                         "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,270,271,272,273,274,277",
+                        "startLines": "2,3,4,5,270,271,278,282,286,289",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,19628,19744,19870,19996,20124,20296",
-                        "endLines": "2,3,4,5,270,271,272,273,276,281",
+                        "startOffsets": "55,159,223,290,19628,19744,20201,20495,20790,20962",
+                        "endLines": "2,3,4,5,270,271,278,282,288,293",
                         "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,19739,19865,19991,20119,20291,20629"
+                        "endOffsets": "154,218,285,349,19739,19865,20322,20618,20957,21295"
                     }
                 },
                 {

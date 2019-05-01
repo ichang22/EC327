@@ -22,6 +22,8 @@ public class Main2Activity extends AppCompatActivity {
     List<Model> models;
     Integer[] colors = null;
     ArgbEvaluator argbEvaluator = new ArgbEvaluator();
+    ArrayList<String> nameArray = null;
+    public static String gameflag;
 
     int pos;
 
@@ -29,14 +31,17 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        //receive list of names
+        if(nameArray == null) {
+            nameArray = getIntent().getExtras().getStringArrayList("list");
+        }
 
         playnow = (Button) findViewById(R.id.playnow);
         //can change button images for types of games
         models = new ArrayList<>();
         models.add(new Model(R.drawable.defaultgame, "Standard Game", "Standard charades where friends act out the word"));
         models.add(new Model(R.drawable.accentgame, "Accents", "Try and guess the accent!"));
-        models.add(new Model(R.drawable.customgame, "Custom Game", "Create your own questions"));
-        models.add(new Model(R.drawable.newgame, "Names Game", "Use team members names and act them out in the given situation"));
+        models.add(new Model(R.drawable.newgame, "Names Game", "Try and guess the celebrity!"));
 
         adapter = new Adapter(models, this);
 
@@ -69,11 +74,31 @@ public class Main2Activity extends AppCompatActivity {
                 playnow.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        if(pos ==0 || pos == 1) {
-                                startActivity(new Intent(Main2Activity.this, MainActivity.class));
-                            }
-                        else if(pos == 3){
-                                startActivity(new Intent(Main2Activity.this, Main3Activity.class));
+                        if(pos ==0 ) {
+                            gameflag = "actions";
+                            Intent intent = new Intent(Main2Activity.this, Main6Activity.class);
+                            intent.putStringArrayListExtra("list", nameArray);
+                            intent.putExtra("gameflag", gameflag);
+                            startActivity(intent);
+                            //startActivity(new Intent(Main2Activity.this, Main3Activity.class));
+                        }
+
+                        else if(pos == 1){
+                            gameflag = "accents";
+                            Intent intent = new Intent(Main2Activity.this, Main6Activity.class);
+                            intent.putStringArrayListExtra("list", nameArray);
+                            intent.putExtra("gameflag", gameflag);
+                            startActivity(intent);
+                            //startActivity(new Intent(Main2Activity.this, Main3Activity.class));
+                        }
+
+                        else if(pos == 2){
+                            gameflag = "celeb";
+                            Intent intent = new Intent(Main2Activity.this, Main6Activity.class);
+                            intent.putStringArrayListExtra("list", nameArray);
+                            intent.putExtra("gameflag", gameflag);
+                            startActivity(intent);
+                            //startActivity(new Intent(Main2Activity.this, Main3Activity.class));
                         }
                     }
                 });
