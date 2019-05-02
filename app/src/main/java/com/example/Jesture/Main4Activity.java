@@ -25,7 +25,7 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
     private TextView mTextViewCountDown;
     private Button mButtonEscape;
     private CountDownTimer mCountDownTimer;
-    private boolean mTimerRunning;
+    private boolean mTimerRunning = true;
     private long mTimeLeft = Game_Time;
     public static String gameflag;
     private static String [] array1;
@@ -52,6 +52,22 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
     private SensorManager sensorManager;
     private Sensor accelerometerSensor;
 
+//    @Override
+//    protected void onNewIntent(Intent intent) {
+//        super.onNewIntent(intent);
+//        mTimeLeft = 30000;
+//        StartTimer();
+//        //p = 0;
+//        //c = 0;
+//    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        mTimeLeft = 30000;
+        StartTimer();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +84,7 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         accelerometerSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         sensorManager.registerListener(this,accelerometerSensor, SensorManager.SENSOR_DELAY_NORMAL);
+
 
         StartTimer();
 
@@ -101,6 +118,7 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
                 intent.putExtra("gameflag", gameflag);
                 intent.putStringArrayListExtra("list", nameArray);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -129,6 +147,7 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
                 intent.putExtra("gameflag", gameflag);
                 intent.putStringArrayListExtra("list", nameArray);
                 startActivity(intent);
+                //finish();
             }
         }.start();
         mTimerRunning = true;
