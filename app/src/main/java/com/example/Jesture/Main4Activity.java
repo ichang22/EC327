@@ -21,7 +21,7 @@ import java.util.ArrayList;
 //game mode with timer
 public class Main4Activity extends AppCompatActivity implements SensorEventListener {
 
-    private static final long Game_Time = 30000; //(milliseconds)
+    private static final long Game_Time = 60000; //(milliseconds)
     private TextView mTextViewCountDown;
     private Button mButtonEscape;
     private CountDownTimer mCountDownTimer;
@@ -74,10 +74,10 @@ public class Main4Activity extends AppCompatActivity implements SensorEventListe
         String gameflag = getIntent().getStringExtra("gameflag");
 
             if (gameflag.equals("celeb")) {
-                array1 = new String[]{"Donald Trump", "Marilyn Monroe", "Ellen Degeneres", "Beyonce", "Morgan Freeman", "Jimmy Fallon", "Michael Jackson", "Justin Bieber", "Mac Miller", "Kim Kardashian", "Miley Cyrus", "Emma Watson", "Jennifer Anniston", "Elvis Presley", "Barrack Obama", "Steve Jobs", "Elon Musk", "George Clooney", "Mark Zuckerberg", "Princess Diana", "Kanye West", "Britney Spears", "Bradley Cooper", "Michelle Obama", "Prof Stringhini"};
+                array1 = new String[]{"Donald Trump", "Marilyn Monroe", "Ellen Degeneres", "Beyonce", "Morgan Freeman", "Jimmy Fallon", "Michael Jackson", "Taylor Swift", "Jim Carey", "Chris Evans", "Chris Pine", "Justin Bieber", "Mac Miller", "Kim Kardashian", "Miley Cyrus", "Emma Watson", "Jennifer Anniston", "Elvis Presley", "Barack Obama", "Steve Jobs", "Elon Musk", "George Clooney", "Mark Zuckerberg", "Princess Diana", "Kanye West", "Britney Spears", "Bradley Cooper", "Michelle Obama", "Prof Stringhini"};
             }
             else if (gameflag.equals("actions")) {
-                array1 = new String[]{"Playing Hopscotch", "Calling a Taxi", "Building a Snowman", "Building a Campfire", "Skiing", "Swimming", "Eating Spaghetti", "Baseball", "Ballet", "Flipping Pancakes", "Jumping on a Trampoline", "Ice Skating", "Yo-yo", "Fishing", "Bowling", "Shopping at the Mall", "Paddling in a Canoe", "Milking a Cow", "Making a Pizza", "Kicking a Field Goal", "Flying a Kite", "Eating Spaghetti", "Taking a Picture"};
+                array1 = new String[]{"Playing Hopscotch", "Calling a Taxi", "Building a Snowman", "Building a Campfire", "Skiing", "Swimming", "Eating Spaghetti", "Baseball", "Ballet", "Frying Bacon", "Scuba Diving", "Rowing", "Feeding Fish", "Flipping Pancakes", "Jumping on a Trampoline", "Ice Skating", "Yo-yo", "Fishing", "Bowling", "Shopping at the Mall", "Paddling in a Canoe", "Milking a Cow", "Making a Pizza", "Kicking a Field Goal", "Flying a Kite", "Eating Spaghetti", "Taking a Picture"};
             }
             else if (gameflag.equals("accents")) {
                 array1 = new String[]{"Italian", "British", "Spanish", "Australian", "Japanese", "French", "Old English", "German", "Russian", "Irish", "Indian", "Boston", "Chicago", "New York", "Baltimore", "Canadian", "Southern", "Cuban", "Swedish", "Robot", "Redneck", "Minnesota"};

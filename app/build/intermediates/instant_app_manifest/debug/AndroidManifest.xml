@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
-        <activity android:name="com.example.Jesture.Main7Activity" />
+        <activity android:name="com.example.Jesture.Main7Activity" >
+        </activity>
         <activity
             android:name="com.example.Jesture.Main6Activity"
             android:configChanges="orientation|keyboardHidden"
