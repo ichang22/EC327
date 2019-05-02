@@ -21,7 +21,7 @@ import java.util.ArrayList;
 //game mode with timer
 public class Main4Activity extends AppCompatActivity implements SensorEventListener {
 
-    private static final long Game_Time = 60000; //(milliseconds)
+    private static final long Game_Time = 30000; //(milliseconds)
     private TextView mTextViewCountDown;
     private Button mButtonEscape;
     private CountDownTimer mCountDownTimer;
